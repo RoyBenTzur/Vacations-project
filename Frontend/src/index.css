@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Core palette */
+    --color-bg:              #0b0f1a;
+    --color-surface:         #111827;
+    --color-surface-raised:  #1a2237;
+
+    /* Gold accent */
+    --color-gold:            #c9a84c;
+    --color-gold-hover:      #e0bc64;
+    --color-gold-subtle:     rgba(201, 168, 76, 0.12);
+    --color-gold-glow:       rgba(201, 168, 76, 0.22);
+
+    /* Borders */
+    --color-border:          rgba(201, 168, 76, 0.18);
+    --color-border-strong:   rgba(201, 168, 76, 0.45);
+
+    /* Text */
+    --color-text-primary:    #f0ece4;
+    --color-text-secondary:  #9eb3cc;
+    --color-text-muted:      #516070;
+
+    /* Feedback */
+    --color-error:           #ef4444;
+    --color-error-hover:     #dc2626;
+    --color-error-subtle:    rgba(239, 68, 68, 0.12);
+
+    /* Shadows */
+    --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-md:   0 4px 24px rgba(0, 0, 0, 0.5);
+    --shadow-lg:   0 8px 40px rgba(0, 0, 0, 0.65);
+    --shadow-gold: 0 0 32px rgba(201, 168, 76, 0.12);
+
+    /* Border radius */
+    --radius-sm:   6px;
+    --radius-md:   12px;
+    --radius-lg:   18px;
+    --radius-pill: 999px;
+
+    /* Transitions */
+    --transition: 0.25s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root {
+    height: 100%;
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--color-text-primary);
+}
+
+body {
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}

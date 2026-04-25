@@ -1,0 +1,76 @@
+.Login {
+    width: 400px;
+    margin: 80px auto;
+    padding: 44px 40px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md), var(--shadow-gold);
+    text-align: left;
+}
+
+.Login h2 {
+    margin: 0 0 36px 0;
+    text-align: center;
+    color: var(--color-text-primary);
+    font-size: 28px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.Login label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.Login input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    outline: none;
+    background-color: var(--color-surface-raised);
+    color: var(--color-text-primary);
+    font-family: 'Inter', Arial, sans-serif;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.Login input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.Login input:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px var(--color-gold-subtle);
+}
+
+.Login button {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    color: var(--color-gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Inter', Arial, sans-serif;
+    margin-top: 8px;
+}
+
+.Login button:hover {
+    background-color: var(--color-gold);
+    color: var(--color-bg);
+    border-color: var(--color-gold);
+}

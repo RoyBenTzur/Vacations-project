@@ -1,0 +1,106 @@
+# docker compose up -d --build
+# docker compose down
+
+services:
+
+  mysql-service:
+
+    image: mysql:8
+
+    container_name: vacations-mysql-container
+
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_USER: roy
+      MYSQL_PASSWORD: Roy0508868024!
+      MYSQL_DATABASE: vacations_db
+      MYSQL_ROOT_PASSWORD: Roy0508868024!
+
+    volumes:
+      - mysql-volume:/var/lib/mysql
+      - ./Database:/docker-entrypoint-initdb.d
+
+    restart: unless-stopped
+
+    # Constantly check if MySQL server works:
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+# ---------------------------------------------------------------------------------------------------
+
+  backend-service:
+
+    depends_on:
+      mysql-service:
+        condition: service_healthy
+
+    build:
+      context: .
+      dockerfile: ./Backend/Dockerfile
+
+    image: roybentzur/backend-image:1.0
+
+    container_name: vacations-backend-container
+
+    environment:
+      ENVIRONMENT: production
+      PORT: 4000
+      MYSQL_HOST: mysql-service
+      MYSQL_USER: roy
+      MYSQL_PASSWORD: Roy0508868024!
+      MYSQL_DATABASE: vacations_db
+
+    ports:
+      - 4000:4000
+
+    volumes:
+      - images-volume:/app/src/1-assets/images
+
+    restart: unless-stopped
+
+    # Constantly check if Backend server works:
+    healthcheck:
+      test: ["CMD", "node", "--eval", "require('http').get('http://localhost:4000/api/vacations', response => process.exit(response.statusCode === 200 ? 0 : 1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+# ---------------------------------------------------------------------------------------------------
+
+  frontend-service:
+
+    depends_on:
+      backend-service:
+        condition: service_healthy
+
+    build:
+      context: .
+      dockerfile: ./Frontend/Dockerfile
+
+    image: roybentzur/frontend-image:1.0
+
+    container_name: vacations-frontend-container
+
+    ports:
+      - 80:5173
+
+    restart: unless-stopped
+
+    # Constantly check if Frontend website works:
+    healthcheck:
+      test: ["CMD", "node", "--eval", "require('http').get('http://localhost:5173', response => process.exit(response.statusCode === 200 ? 0 : 1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+# ---------------------------------------------------------------------------------------------------
+
+volumes:
+  mysql-volume:
+  images-volume:

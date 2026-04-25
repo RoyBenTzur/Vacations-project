@@ -1,0 +1,21 @@
+.Layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.Layout main {
+    flex: 1;
+}
+
+.Layout::after {
+    content: '\00A9 All rights reserved to Roy Ben-Tzur  \2014  John Bryce Student  \2014  For entertainment purposes';
+    display: block;
+    text-align: center;
+    padding: 18px 24px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+}

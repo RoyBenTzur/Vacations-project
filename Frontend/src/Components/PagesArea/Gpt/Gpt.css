@@ -1,0 +1,108 @@
+.Gpt {
+    max-width: 640px;
+    margin: 60px auto;
+    padding: 48px 44px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md), var(--shadow-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.Gpt h2 {
+    font-size: 28px;
+    color: var(--color-text-primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.Gpt input {
+    width: 100%;
+    padding: 13px 18px;
+    font-size: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface-raised);
+    color: var(--color-text-primary);
+    font-family: 'Inter', Arial, sans-serif;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.Gpt input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.Gpt input:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px var(--color-gold-subtle);
+}
+
+.Gpt button {
+    padding: 12px 40px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    color: var(--color-gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Inter', Arial, sans-serif;
+    min-width: 140px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Gpt button:hover:not(:disabled) {
+    background-color: var(--color-gold);
+    color: var(--color-bg);
+    border-color: var(--color-gold);
+}
+
+.Gpt button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Loading spinner */
+.GptSpinner {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(201, 168, 76, 0.25);
+    border-top-color: var(--color-gold);
+    border-radius: 50%;
+    animation: gpt-spin 0.7s linear infinite;
+}
+
+@keyframes gpt-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Answer box */
+.Gpt p {
+    width: 100%;
+    text-align: left;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 20px 24px;
+    background-color: var(--color-surface-raised);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.Gpt p:empty {
+    display: none;
+}

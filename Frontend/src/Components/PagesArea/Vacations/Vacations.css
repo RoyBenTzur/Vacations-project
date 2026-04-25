@@ -1,0 +1,261 @@
+.Vacations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 44px 40px;
+    max-width: 1540px;
+    margin: 0 auto;
+}
+
+/* ── Add button (admin) ─────────────────────────────── */
+.AddButton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+}
+
+.AddButton button {
+    padding: 10px 26px;
+    background-color: transparent;
+    color: var(--color-gold);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.AddButton button:hover {
+    background-color: var(--color-gold);
+    color: var(--color-bg);
+    border-color: var(--color-gold);
+}
+
+/* ── Card click wrapper ─────────────────────────────── */
+.VacationCardWrapper {
+    width: 430px;
+    cursor: pointer;
+}
+
+/* ── Vacation card ──────────────────────────────────── */
+.VacationCard {
+    width: 430px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.VacationCard:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-strong);
+}
+
+.ImageContainer {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.VacationImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.VacationCard:hover .VacationImage {
+    transform: scale(1.05);
+}
+
+.VacationTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 64px 22px 18px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.86) 0%, transparent 100%);
+    color: #ffffff;
+}
+
+.VacationTitle h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ── Like badge ─────────────────────────────────────── */
+.LikesBadge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(11, 15, 26, 0.72);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition);
+    color: var(--color-text-primary);
+}
+
+.LikesBadge:hover {
+    background-color: rgba(11, 15, 26, 0.9);
+    border-color: rgba(255, 80, 80, 0.45);
+    transform: scale(1.06);
+}
+
+.LikesBadge span:first-child {
+    color: #cc3333;
+}
+
+.Liked {
+    background-color: rgba(185, 28, 28, 0.72);
+    border-color: rgba(255, 100, 100, 0.4);
+    color: #fff;
+}
+
+.Liked span:first-child {
+    color: #fff;
+}
+
+/* ── Card body ──────────────────────────────────────── */
+.VacationContent {
+    padding: 26px 28px 32px;
+    text-align: left;
+    border-top: 1px solid var(--color-border);
+}
+
+.VacationContent p {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+.VacationContent p:first-child {
+    color: var(--color-text-primary);
+    margin-bottom: 26px;
+    line-height: 1.82;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Detail rows — dates and price are the main selling points */
+.VacationContent p:not(:first-child) {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.VacationContent p strong {
+    display: block;
+    color: var(--color-gold);
+    font-weight: 700;
+    font-size: 13.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+/* ── Filter buttons ─────────────────────────────────── */
+.Filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.Filters button {
+    padding: 9px 22px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition: var(--transition);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.Filters button:hover {
+    background-color: var(--color-gold-subtle);
+    color: var(--color-gold);
+    border-color: var(--color-border-strong);
+}
+
+/* Active state — applied when TSX adds class="active" to the chosen button */
+.Filters button.active {
+    background-color: var(--color-gold-subtle);
+    color: var(--color-gold);
+    border-color: var(--color-border-strong);
+}
+
+/* ── Pagination ─────────────────────────────────────── */
+.Pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.Pagination button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.Pagination button:hover {
+    background-color: var(--color-gold-subtle);
+    color: var(--color-gold);
+    border-color: var(--color-border-strong);
+}
+
+/* ── Empty state ─────────────────────────────────────── */
+.Vacations:not(:has(.VacationCard))::after {
+    content: 'No vacations found for this filter.';
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 64px 20px;
+    color: var(--color-text-muted);
+    font-size: 17px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    letter-spacing: 0.04em;
+}

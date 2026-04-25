@@ -1,0 +1,112 @@
+.AddVacation {
+    width: 560px;
+    margin: 40px auto;
+    padding: 44px 40px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+}
+
+.AddVacationTitle {
+    text-align: center;
+    margin-bottom: 36px;
+    color: var(--color-text-primary);
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.AddVacationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.AddVacationForm label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.AddVacationForm input,
+.AddVacationForm textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface-raised);
+    color: var(--color-text-primary);
+    font-size: 15px;
+    font-family: 'Inter', Arial, sans-serif;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.AddVacationForm input::placeholder,
+.AddVacationForm textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.AddVacationForm input:focus,
+.AddVacationForm textarea:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px var(--color-gold-subtle);
+}
+
+.AddVacationForm textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.AddVacationImage {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-top: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.AddVacationVideoPreview {
+    width: 100%;
+    max-height: 200px;
+    border-radius: var(--radius-sm);
+    margin-top: 8px;
+    border: 1px solid var(--color-border-strong);
+    background-color: #000;
+}
+
+.AddVacationError {
+    color: var(--color-error);
+    font-size: 13px;
+    background-color: var(--color-error-subtle);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(239, 68, 68, 0.28);
+}
+
+.AddVacationForm button {
+    margin-top: 20px;
+    padding: 13px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    color: var(--color-gold);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: var(--transition);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.AddVacationForm button:hover {
+    background-color: var(--color-gold);
+    color: var(--color-bg);
+    border-color: var(--color-gold);
+}

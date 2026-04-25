@@ -1,0 +1,151 @@
+.About {
+    max-width: 760px;
+    margin: 60px auto;
+    padding: 52px 56px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md), var(--shadow-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.About h2 {
+    font-size: 30px;
+    color: var(--color-text-primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.About-subtitle {
+    color: var(--color-gold);
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: -12px;
+}
+
+/* ── Sections ── */
+
+.About-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px 32px;
+    background-color: var(--color-surface-raised);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.About-section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin: 0 0 4px 0;
+}
+
+.About-section p {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+.About-section strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+/* ── Tech list ── */
+
+.About-tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.About-tech-list li {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+    padding-left: 16px;
+    position: relative;
+}
+
+.About-tech-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+.About-tech-list strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+/* ── Developer section ── */
+
+.About-developer {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.About-photo {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-strong);
+    flex-shrink: 0;
+}
+
+.About-developer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+/* ── Tagline ── */
+
+.About-tagline {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-style: italic;
+}
+
+/* ── Disclaimer ── */
+
+.About-disclaimer {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background-color: transparent;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+.About-disclaimer strong {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+}

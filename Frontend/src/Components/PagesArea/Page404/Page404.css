@@ -1,0 +1,30 @@
+.Page404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 60px 24px;
+}
+
+.Page404::before {
+    content: '404';
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    opacity: 0.14;
+    margin-bottom: -8px;
+}
+
+.Page404 p {
+    color: var(--color-text-secondary);
+    font-size: 18px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}

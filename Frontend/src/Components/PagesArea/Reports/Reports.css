@@ -1,0 +1,99 @@
+.Reports {
+    width: calc(100% - 48px);
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 44px 40px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.Reports > button {
+    margin-bottom: 32px;
+    padding: 11px 28px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background-color: transparent;
+    color: var(--color-gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.Reports > button:hover {
+    background-color: var(--color-gold);
+    color: var(--color-bg);
+    border-color: var(--color-gold);
+}
+
+.Chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 20px 12px 16px;
+    background-color: var(--color-surface-raised);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    min-height: 260px;
+    width: 100%;
+}
+
+.YAxis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    margin-right: 12px;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    text-align: right;
+    letter-spacing: 0.02em;
+}
+
+.Bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    flex: 1;
+    width: 0;
+}
+
+.BarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.Bar {
+    width: 100%;
+    background: linear-gradient(180deg, var(--color-gold-hover) 0%, var(--color-gold) 100%);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    min-height: 4px;
+    box-shadow: 0 0 14px var(--color-gold-glow);
+    transition: opacity var(--transition);
+}
+
+.Bar:hover {
+    opacity: 0.75;
+}
+
+.BarLabel {
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+    color: var(--color-text-muted);
+    letter-spacing: 0.02em;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,47 @@
+.AdminBadge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.AdminBadge button {
+    border: none;
+    border-radius: var(--radius-pill);
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+/* Edit button — neutral/subtle */
+.AdminBadge button:first-child {
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #f0ece4;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.AdminBadge button:first-child:hover {
+    background-color: rgba(255, 255, 255, 0.26);
+    transform: scale(1.04);
+}
+
+/* Delete button — destructive red */
+.AdminBadge button:last-child {
+    background-color: rgba(239, 68, 68, 0.18);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.AdminBadge button:last-child:hover {
+    background-color: rgba(239, 68, 68, 0.5);
+    color: #ffffff;
+    border-color: rgba(239, 68, 68, 0.6);
+    transform: scale(1.04);
+}
