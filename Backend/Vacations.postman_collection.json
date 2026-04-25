@@ -1,0 +1,341 @@
+{
+  "info": {
+    "_postman_id": "6f1b97d1-85d2-4d0d-b303-faac9da68a7a",
+    "name": "Vacations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51857004",
+    "_collection_link": "https://go.postman.co/collection/51857004-6f1b97d1-85d2-4d0d-b303-faac9da68a7a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Add Vacation",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "destination",
+              "value": "Test",
+              "type": "text",
+              "uuid": "3dcd4d6b-f5f8-4346-a2d7-94227132616e"
+            },
+            {
+              "key": "description",
+              "value": "Test",
+              "type": "text",
+              "uuid": "c920b8c7-3a6a-48de-8f04-94f0d6114d95"
+            },
+            {
+              "key": "startDate",
+              "value": "2026-05-01",
+              "type": "text",
+              "uuid": "0be08ec5-fba8-4260-ba22-4e9163f0a93e"
+            },
+            {
+              "key": "endDate",
+              "value": "2026-05-10",
+              "type": "text",
+              "uuid": "602ad2d7-d9ed-4024-8a46-b942b479e9f0"
+            },
+            {
+              "key": "price",
+              "value": "1500",
+              "type": "text",
+              "uuid": "bf241792-2648-4120-bef4-0c1e9a4fd99b"
+            },
+            {
+              "key": "image",
+              "type": "file",
+              "uuid": "a283f5c7-ffbc-4100-939d-73063717a8bd",
+              "src": "/C:/Users/royal/OneDrive/שולחן העבודה/TestKitten.jfif"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/vacations",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "vacations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Vacations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/vacations?userId=2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "vacations"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get  One Vacation",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/vacations/16",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "vacations",
+            "16"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Vacation",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/vacations/16",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "vacations",
+            "16"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Vacation",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/vacations/13",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "vacations",
+            "13"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Like",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": 2,\r\n  \"vacationId\": 16\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/likes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "likes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Like",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": 2,\r\n  \"vacationId\": 16\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/likes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "likes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Marge\",\r\n    \"lastName\": \"Simpson\",\r\n    \"email\": \"marge@simpson.com\",\r\n    \"password\": \"1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"marge@simpson.com\",\r\n    \"password\": \"1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask Gpt",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"prompt\": \"I like to travel to Israel\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/gpt",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "gpt"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask MCP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"question\": \"what is the most popular vacation?\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/mcp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "mcp"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
